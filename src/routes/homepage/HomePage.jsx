@@ -12,7 +12,7 @@ const HomePage = () => {
         <Link to="/dashboard" className="button">Get Started</Link>
       </div>
       <div className="right">
-        <div className="imageContainer">
+        <div className="imgContainer">
           <div className="bgContainer">
           <div className="bg"></div>
           </div>

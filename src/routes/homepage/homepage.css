@@ -42,7 +42,7 @@
   align-items: center;
   justify-content: center;
   height: 100%;
-  .imageContainer{
+  .imgContainer{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -82,6 +82,7 @@
     left: 0;
     opacity: 0.4;
     animation: 100s linear rotateOrbital;
+    z-index: -1;
 }
 @keyframes rotateOrbital{
     0%{
