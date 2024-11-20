@@ -15,7 +15,21 @@ const NewPrompt = () => {
     dbData: {},
     aiData: {},
   });
-
+  const chatt= model.startChat({
+    history: [
+      {
+        role: "user",
+        parts:[{text: "Hi"}],
+      },
+      {
+        role: "model",
+        parts:[{text: "Hello"}],
+      },
+    ],
+    generationConfig:{
+      // maxOutputTokens: 100,
+    },
+  });
   const endRef = useRef(null);
 
   useEffect(() => {
@@ -24,11 +38,15 @@ const NewPrompt = () => {
 
   const add = async (text) => {
     setQuestion(text);
-    const result = await model.generateContent(
+    const result = await chatt.sendMessageStream(
       Object.entries(img.aiData).length ? [img.aiData, text] : [text]
     );
-    const response = await result.response;
-    setAnswer(response.text());
+    let accumulatedText = "";
+    for await(const chunk  of result.stream){
+      const chunkText = chunk.text();
+      accumulatedText += chunkText;
+    }
+    setAnswer(accumulatedText);
     setImg({
       isLoading: false,
       error: "",
