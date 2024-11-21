@@ -1,25 +1,113 @@
-.rootLayout{
-    padding: 16px 64px;
-    height: 100vh;
+.rootLayout {
+  padding: 16px 64px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  header {
     display: flex;
-    flex-direction: column;
-    header{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        .logo{
-            display: flex;
-            align-items: center;
-            font-weight: bold;
-            gap: 8px;
-            img{
-                height: 32px;
-                width: 32px;
-            }
-        }
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      gap: 8px;
+
+      img {
+        width: 32px;
+        height: 32px;
+      }
     }
-    main{
-        flex: 1;
-        overflow: hidden;
-    }
+  }
+
+  main {
+    flex: 1;
+    overflow: hidden;
+  }
+}
+.rootLayout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+footer {
+  padding-top: 0.1rem;
+  height: 10px; /* Adjust the height as needed */
+}
+.custom-footer {
+  width: 100%;
+}
+
+.custom-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.footer-social-icons {
+  display: flex;
+  justify-content: space-between;
+  max-width: 280px;
+  margin: 0 auto;     
+  align-items: center;
+}
+
+.footer-icon {
+  color: #718096;
+  text-decoration: none;
+  font-size: 1.5rem;
+  transition: color 0.2s ease;
+}
+
+.footer-icon:hover,
+.copyright a:hover {
+  color: rgb(40, 23, 82);
+}
+
+.copyright {
+  position: sticky;
+  text-align: center;
+  color: #a0aec0;
+  margin-top: 1.5rem;
+  font-size: 0.875rem;
+}
+.github-button {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.github-button a {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #f2f2f2;
+  color: #333333;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.github-button a:hover {
+  background-color: #dfdfdf;
+}
+@media only screen and (max-width: 700px) {
+  .github-button a {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+.copyright a {
+  color: #718096;
+  text-decoration: none;
 }
