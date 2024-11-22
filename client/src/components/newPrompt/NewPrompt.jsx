@@ -58,6 +58,7 @@ const NewPrompt = ({ data }) => {
         .then(() => {
           formRef.current.reset();
           setQuestion("");
+          setAnswer("");
           setImg({
             isLoading: false,
             error: "",
