@@ -58,7 +58,6 @@ const NewPrompt = ({ data }) => {
         .then(() => {
           formRef.current.reset();
           setQuestion("");
-          setAnswer("");
           setImg({
             isLoading: false,
             error: "",
@@ -82,7 +81,6 @@ const NewPrompt = ({ data }) => {
       let accumulatedText = "";
       for await (const chunk of result.stream) {
         const chunkText = chunk.text();
-        console.log(chunkText);
         accumulatedText += chunkText;
         setAnswer(accumulatedText);
       }
