@@ -16,9 +16,6 @@ const ChatPage = () => {
         credentials: "include",
       }).then((res) => res.json()),
   });
-
-  console.log(data);
-
   return (
     <div className="chatPage">
       <div className="wrapper">
