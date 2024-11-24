@@ -3,12 +3,12 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Homepage from "./homepage/Homepage"
-import ChatPage from "./routes/chatPage/ChatPage";
+import ChatPage from "./chatPage/ChatPage";
 import RootLayout from "./layouts/rootLayout/RootLayout";
-import SignInPage from "./routes/signInPage/signInPage";
-import SignUpPage from "./routes/signUpPage/signUpPage";
+import SignInPage from "./signInPage/signInPage";
+import SignUpPage from "./signUpPage/signUpPage";
 import DashboardLayout from "./layouts/dashboardLayout/DashboardLayout";
-import DashboardPage from "./routes/dashboardPage/DashboardPage";
+import DashboardPage from "./dashboardPage/DashboardPage";
 
 const router = createBrowserRouter([
   {
