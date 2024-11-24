@@ -4,10 +4,10 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Homepage from "./homepage/Homepage"
 import ChatPage from "./chatPage/ChatPage";
-import RootLayout from "./layouts/rootLayout/RootLayout";
+import RootLayout from "./rootLayout/RootLayout";
 import SignInPage from "./signInPage/signInPage";
 import SignUpPage from "./signUpPage/signUpPage";
-import DashboardLayout from "./layouts/dashboardLayout/DashboardLayout";
+import DashboardLayout from "./dashboardLayout/DashboardLayout";
 import DashboardPage from "./dashboardPage/DashboardPage";
 
 const router = createBrowserRouter([
