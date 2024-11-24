@@ -40,7 +40,7 @@ const NewPrompt = ({ data }) => {
   const mutation = useMutation({
     mutationFn: () => {
       return fetch(`${import.meta.env.VITE_API_URL}/api/chats/${data._id}`, {
-        method: "PUT",
+        method: "POST",
         credentials: "include",
         headers: {
           "Content-Type": "application/json",
