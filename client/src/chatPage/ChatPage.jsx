@@ -1,5 +1,5 @@
 import "./chatPage.css";
-import NewPrompt from "../../components/newPrompt/NewPrompt";
+import NewPrompt from "../components/newPrompt/NewPrompt";
 import { useQuery } from "@tanstack/react-query";
 import { useLocation } from "react-router-dom";
 import Markdown from "react-markdown";
