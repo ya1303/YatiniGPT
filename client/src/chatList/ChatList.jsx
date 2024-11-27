@@ -6,7 +6,7 @@ const ChatList = () => {
   const { isPending, error, data } = useQuery({
     queryKey: ["userChats"],
     queryFn: () =>
-      fetch(`${import.meta.env.VITE_API_URL}/api/userchats`, {
+      fetch("backend-hai-bhai.vercel.app/api/userchats", {
         credentials: "include",
       }).then((res) => res.json()),
   });
