@@ -16,7 +16,7 @@ const __dirname = path.dirname(__filename);
 
 app.use(
   cors({
-    origin: process.env.CLIENT_URL,
+    origin: "https://yatini-gpt.vercel.app",
     credentials: true,
     methods: ["GET", "POST", "PUT"],
   })
